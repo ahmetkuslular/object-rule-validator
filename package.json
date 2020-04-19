@@ -1,0 +1,17 @@
+{
+  "name": "object-validator",
+  "version": "1.0.0",
+  "description": "object-validator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "rule"
+  ],
+  "author": "Ahmet Kuslular",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}
