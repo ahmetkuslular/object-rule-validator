@@ -1,19 +1,34 @@
 "use strict";
 
+const condition = {
+    GREATER_THAN: '>',
+    LESS_THAN: '<',
+    GREATER_THAN_EQUAL: '>=',
+    LESS_THAN_EQUAL: '<=',
+    EQUAL: '===',
+    NOT_EQUAL: '!==',
+    MAX: 'max',
+    MIN: 'min'
+}
+
 function compare(post, operator, value) {
     switch (operator) {
-        case ">":
+        case condition.GREATER_THAN:
             return post > value
-        case "<":
+        case condition.LESS_THAN:
             return post < value
-        case ">=":
+        case condition.GREATER_THAN_EQUAL:
             return post >= value
-        case "<=":
+        case condition.LESS_THAN_EQUAL:
             return post <= value
-        case "===":
+        case condition.EQUAL:
             return post === value
-        case "!==":
+        case condition.NOT_EQUAL:
             return post !== value
+        case condition.MAX:
+            return post <= value
+        case condition.MIN:
+            return post >= value
     }
 }
 
@@ -67,7 +82,7 @@ function returnResult(result, defualtResult) {
 }
 
 
-module.exports = function (values, rules) {
+function objectValidator(values, rules) {
     const results =  Object.keys(values).map(valueKey => {
         const rule = rules[valueKey];
         if(rule) {
@@ -86,5 +101,5 @@ module.exports = function (values, rules) {
 };
 
 
-
-
+export default objectValidator;
+export {condition};
