@@ -23,13 +23,21 @@ function typeControlSwitch(value, rule) {
     }else if (typeof rule === "object") {
         return ruleIsObject(value, rule);
     }else {
-        return 'anything'
+        return false;
     }
 }
 
 function ruleIsObject (value, rule) {
-    if (compare(value, rule.condition, rule.value)) {
-        return returnResult(rule['trueResult'], true)
+    if(rule.value){
+        if(rule.condition){
+            if (compare(value, rule.condition, rule.value)) {
+                return returnResult(rule['trueResult'], true)
+            }
+        }else if(rule.regex){
+            if(rule.regex.test(value)){
+                return returnResult(rule['trueResult'], true)
+            }
+        }
     }
     return returnResult(rule['falseResult'], false)
 }

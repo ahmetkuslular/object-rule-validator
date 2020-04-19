@@ -112,6 +112,25 @@ const data = { number: 5 }
 { number: false }
 ```
 
+## Regex
+```
+const data = {
+    text: 'hello world'
+}
+
+const rules = {
+    text: {
+        value: true,
+        regex: /hello/
+    }
+} 
+
+//output
+{
+    text: true
+}
+```
+
 ## TODO
 * More Test
 * Regex validation

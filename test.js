@@ -36,4 +36,10 @@ describe('RuleSetter Tests', () => {
 
         })
     });
+    it('regex control', () => {
+        const data = {value1: "hello World"}
+        const rules = { value1: { value: true, regex: /hello/}};
+
+        expect(ruleSetter(data, rules)).toEqual({value1: true});
+    });
 });
