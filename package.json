@@ -1,17 +1,26 @@
 {
-  "name": "object-validator",
+  "name": "object-rule-validator",
   "version": "1.0.0",
-  "description": "object-validator",
+  "description": "Object validation",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetkuslular/object-validator.git"
+  },
   "keywords": [
-    "rule"
+    "object",
+    "validation"
   ],
-  "author": "Ahmet Kuslular",
+  "author": "Ahmet Kuşlular",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmetkuslular/object-validator/issues"
+  },
+  "homepage": "https://github.com/ahmetkuslular/object-validator#readme",
   "devDependencies": {
-    "jest": "^25.3.0"
+    "jest": "25.3.0"
   }
 }
