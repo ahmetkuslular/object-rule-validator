@@ -59,7 +59,7 @@ objectValidator(values, rules)
 }
 ```
 
-##custom result
+## custom result
 
 ```
 const data = {
@@ -82,7 +82,7 @@ const rules = {
 ```
 
 
-##Multi Condition
+## Multi Condition
 If you want to make multi condition, you have to pass the rule as an array. What you need to pay attention to here is that the rules are read from the top and work in the if - else logic.
 Also remember to pass trueResult or falseResult. otherwise you will get true or false for all values.
 ```
@@ -112,7 +112,7 @@ const data = { number: 5 }
 { number: false }
 ```
 
-##TODO
+## TODO
 * More Test
 * Regex validation
 
