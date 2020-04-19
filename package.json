@@ -1,6 +1,6 @@
 {
   "name": "object-rule-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Object validation",
   "main": "index.js",
   "scripts": {
